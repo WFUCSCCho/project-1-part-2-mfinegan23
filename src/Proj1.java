@@ -3,6 +3,7 @@ import java.io.FileNotFoundException;
 public class Proj1 {
     public static void main(String[] args) throws FileNotFoundException{
         if(args.length != 1){
+            System.out.println(args[0] + " gkjhghjgjhghjg" + args[1]);
             System.err.println("Argument count is invalid: " + args.length);
             System.exit(0);
         }
