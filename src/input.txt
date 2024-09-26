@@ -1,0 +1,29 @@
+
+
+insert 2023,DataScientist,DataScienceandResearch,USD,93300,93300,UnitedStates,Senior,Full-time,In-person,UnitedStates,M
+             insert 2023,DataAnalyst,DataAnalysis,USD,110000,110000,UnitedStates,Mid-level,Full-time,In-person,UnitedStates,M
+
+insert 99
+insert         2023,MachineLearningEngineer,MachineLearningandAI,USD,152000,152000,UnitedStates,Senior,Full-time,In-person,UnitedStates,M
+
+isEmpty
+
+    insert     111
+
+print
+
+
+search 2023,DataScientist,DataScienceandResearch,USD,93300,93300,UnitedStates,Senior,Full-time,In-person,UnitedStates,M
+
+remove 2023,MachineLearningEngineer,MachineLearningandAI,USD,152000,152000,UnitedStates,Senior,Full-time,In-person,UnitedStates,M
+
+remove 4
+remove 999999
+isEmptyasfh
+
+
+
+print
+
+insert 123
+print

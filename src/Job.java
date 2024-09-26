@@ -5,7 +5,7 @@
  ∗ @date: September 24 , 2024
  ***********************************************************************/
 
-
+import java.util.Objects;
 
 public class Job implements Comparable<Job> {
 
@@ -83,26 +83,57 @@ public class Job implements Comparable<Job> {
 
     }
 
-    // Comparable interface for Job data
+    // Compares based off of salaryInUSD
     @Override
     public int compareTo(Job job) {
+
+//        if (this.jobTitle != job.jobTitle){
+//            return Integer.compare(this.workYear, job.workYear);
+//        }
+
         return this.salaryInUSD.compareTo(job.salaryInUSD);
     }
 
 
 
 
-    public boolean equals(Job obj) {
+//    public boolean equals(Job obj) {
+//        if (this == obj) {
+//            return true; // Check if it's the same object
+//        }
+//        if (obj == null || getClass() != obj.getClass()) {
+//            return false; // Check if job is a Job
+//        }
+//        Job job = (Job) obj; // Cast the object to Job // Needed?
+//
+//        return this.salaryInUSD == job.salaryInUSD; // Compare salary
+//    }
+
+
+
+    @Override
+    public boolean equals(Object obj) {
         if (this == obj) {
             return true; // Check if it's the same object
         }
         if (obj == null || getClass() != obj.getClass()) {
-            return false; // Check if job is a Job
+            return false; // Check if obj is a Job
         }
-        Job job = (Job) obj; // Cast the object to Job // Needed?
-
-        return this.salaryInUSD == job.salaryInUSD; // Compare salary
+        Job job = (Job) obj; // Cast the object to Job
+        return Objects.equals(workYear, job.workYear) &&
+                Objects.equals(jobTitle, job.jobTitle) &&
+                Objects.equals(jobCategory, job.jobCategory) &&
+                Objects.equals(salaryCurrency, job.salaryCurrency) &&
+                Objects.equals(salary, job.salary) &&
+                Objects.equals(salaryInUSD, job.salaryInUSD) &&
+                Objects.equals(employeeResidence, job.employeeResidence) &&
+                Objects.equals(experienceLevel, job.experienceLevel) &&
+                Objects.equals(employmentType, job.employmentType) &&
+                Objects.equals(workSetting, job.workSetting) &&
+                Objects.equals(companyLocation, job.companyLocation) &&
+                Objects.equals(companySize, job.companySize);
     }
+
 
 
     // Getters and Setters for Work Year
